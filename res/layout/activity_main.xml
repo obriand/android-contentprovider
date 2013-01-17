@@ -29,11 +29,11 @@
         android:layout_below="@id/mainactivity_add_bt" />
 
     <Button
-        android:id="@+id/mainactivity_last_bt"
+        android:id="@+id/mainactivity_get_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="btGetLastItem"
-        android:text="@string/get_last_item_bt"
+        android:onClick="btGetItem"
+        android:text="@string/get_item_bt"
         android:layout_below="@id/mainactivity_count_bt" />
 
 </RelativeLayout>
