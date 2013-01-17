@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.database.Cursor;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -18,9 +19,45 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Log.i(TAG, "display item detail : onCreate");
+		Log.i(TAG, "onCreate");
 
-		// Get LRMessages from Content Provider
+		// Get Items from Content Provider
+		String columns[] = new String[] { Item.ITEM_ID,
+				Item.ITEM_NAME, Item.ITEM_DESC };
+		Uri mItems = ItemProvider.CONTENT_URI;
+		Cursor cur = getContentResolver().query(mItems, columns, null, null, null);
+
+		Toast.makeText(this, cur.getCount() + "", Toast.LENGTH_LONG).show();
+	}
+	
+	public void btAddItem(View view) {
+		Log.i(TAG, "add item");
+		
+		// Get Items from Content Provider
+		String columns[] = new String[] { Item.ITEM_ID,
+				Item.ITEM_NAME, Item.ITEM_DESC };
+		Uri mItems = ItemProvider.CONTENT_URI;
+		Cursor cur = getContentResolver().query(mItems, columns, null, null, null);
+
+		Toast.makeText(this, cur.getCount() + "", Toast.LENGTH_LONG).show();
+	}
+	
+	public void btGetCount(View view) {
+		Log.i(TAG, "get count");
+		
+		// Get Count Items from Content Provider
+		String columns[] = new String[] { Item.ITEM_ID,
+				Item.ITEM_NAME, Item.ITEM_DESC };
+		Uri mItems = ItemProvider.CONTENT_URI;
+		Cursor cur = getContentResolver().query(mItems, columns, null, null, null);
+
+		Toast.makeText(this, cur.getCount() + "", Toast.LENGTH_LONG).show();
+	}
+	
+	public void btGetLastItem(View view) {
+		Log.i(TAG, "get last");
+		
+		// Get Last Item from Content Provider
 		String columns[] = new String[] { Item.ITEM_ID,
 				Item.ITEM_NAME, Item.ITEM_DESC };
 		Uri mItems = ItemProvider.CONTENT_URI;
