@@ -70,7 +70,7 @@ public class ItemProvider extends ContentProvider {
         try {
         	long id = db.insertOrThrow(ITEMS_TABLE_NAME, null, values);
         	if (id == -1) {
-                throw new RuntimeException(String.format("%s : Failed to insert [%s] for unknown reasons.","LRMessageProvider", values, uri));
+                throw new RuntimeException(String.format("%s : Failed to insert [%s] for unknown reasons.","ItemProvider", values, uri));
             } else {
                 return ContentUris.withAppendedId(uri, id);
             }

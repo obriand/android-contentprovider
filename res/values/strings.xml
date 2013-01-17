@@ -4,5 +4,9 @@
     <string name="app_name">android-contentprovider</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="write_item_bt">write_item_bt</string>
+    <string name="get_count_items_bt">get_count_items_bt</string>
+    <string name="get_last_item_bt">get_last_item_bt</string>
+    <string name="add_item_bt">add_item_bt</string>
 
 </resources>

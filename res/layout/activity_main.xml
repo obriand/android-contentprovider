@@ -5,10 +5,35 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/mainactivity_hello_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
         android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/mainactivity_add_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btAddItem"
+        android:text="@string/add_item_bt"
+        android:layout_below="@id/mainactivity_hello_tv" />
+
+    <Button
+        android:id="@+id/mainactivity_count_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btGetCount"
+        android:text="@string/get_count_items_bt"
+        android:layout_below="@id/mainactivity_add_bt" />
+
+    <Button
+        android:id="@+id/mainactivity_last_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btGetLastItem"
+        android:text="@string/get_last_item_bt"
+        android:layout_below="@id/mainactivity_count_bt" />
 
 </RelativeLayout>
